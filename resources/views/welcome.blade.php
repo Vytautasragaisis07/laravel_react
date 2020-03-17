@@ -14,7 +14,7 @@
         <link href="../css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -28,7 +28,8 @@
                     @endauth
                 </div>
             @endif
-
+        </div>
+        <div class="example">
             <div id="example"></div>
             <script src="../js/app.js"></script>
         </div>
