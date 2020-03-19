@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+
 use App\Holidays;
 use File;
 use Gate;
@@ -14,7 +14,7 @@ class HolidaysController extends Controller
 
     public function AddHoliday()
     {
-        $categories = Category::all();
+        $holidays = Holidays::all();
         return view('shop.pages.add-holiday');
     }
 
