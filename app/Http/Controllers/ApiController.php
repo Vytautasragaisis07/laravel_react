@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Holidays;
 use App\Order;
 use Illuminate\Http\Request;
 
@@ -11,7 +11,7 @@ class ApiController extends Controller
     public function allProducts()
     {
 
-        $products = Product::select(
+        $products = Holidays::select(
             'products.*',
             'categories.category as category_name'
             )->join("categories", 'categories.id', '=', 'products.catid')
@@ -38,7 +38,7 @@ class ApiController extends Controller
     public function get_products_by_id($id)
     {
 
-        return Product::find($id);
+        return Holidays::find($id);
     }
 
 }
