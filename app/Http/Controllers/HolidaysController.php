@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Holidays;
+use App\Holiday;
 use File;
 use Gate;
 use Illuminate\Support\Facades\Auth;
@@ -14,8 +14,8 @@ class HolidaysController extends Controller
 
     public function AddHoliday()
     {
-        $holidays = Holidays::all();
-        return view('shop.pages.add-holiday');
+        $holidays = Holiday::all();
+        return view('holiday.pages.add-holiday');
     }
 
     public function storeHoliday(Request $request)
@@ -29,7 +29,7 @@ class HolidaysController extends Controller
         $path = $request->file('img')->store('public/images');
         $filename = str_replace('public/', "", $path);
 
-        $holiday = Holidays::create([
+        $holiday = Holiday::create([
             'title' => request('title'), //name
             'description' => request('description'),
             'img' => $filename,
@@ -40,29 +40,29 @@ class HolidaysController extends Controller
 
     public function ControlHoliday()
     {
-        $holidays = Holidays::all();
-        return view('shop.pages.control-holiday', compact('holidays')); //psl
+        $holidays = Holiday::all();
+        return view('holiday.pages.control-holiday', compact('holidays')); //psl
     }
 
-    public function warningHoliday(Holidays $holiday)
+    public function warningHoliday(Holiday $holiday)
     {
-        return view('shop.pages.warning-holiday', compact('holiday'));
+        return view('holiday.pages.warning-holiday', compact('holiday'));
     }
 
-    public function deleteHoliday(Holidays $holiday)
+    public function deleteHoliday(Holiday $holiday)
     {
 
       $holiday->delete();
       return redirect('control-holiday');
     }
 
-    public function editHoliday(Holidays $holiday){
-        $holidays = Holidays::all();
+    public function editHoliday(Holiday $holiday){
+        $holidays = Holiday::all();
 
-        return view ('shop.pages.edit-holiday', compact('holiday'));
+        return view ('holiday.pages.edit-holiday', compact('holiday'));
     }
 
-    public function edit_Holiday(Request $request, Holidays $holiday){
+    public function edit_Holiday(Request $request, Holiday $holiday){
 
         $validateData = $request->validate([
             'title' => 'required',
@@ -70,7 +70,7 @@ class HolidaysController extends Controller
             'img' => 'mimes:jpeg,jpg,png,gif|required|max:10000'
         ]);
 
-        Holidays::where('id', $holiday->id)->update
+        Holiday::where('id', $holiday->id)->update
         (['title' => request('title'),
             'description' => request('description'),
             'img' => request('img')
@@ -80,7 +80,7 @@ class HolidaysController extends Controller
             File::delete('storage/'.$holiday->img);
             $path=$request->file('img')->store('/public/');
             $filename=str_replace('public/',"",$path);
-            Holidays::where('id',$holiday->id)->update([
+            Holiday::where('id',$holiday->id)->update([
                 'img'=>$filename
             ]);
         }

@@ -1,4 +1,4 @@
-@extends('shop/main')
+@extends('holiday/main')
 
 @section('content')
 

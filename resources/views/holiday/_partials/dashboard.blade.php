@@ -21,34 +21,15 @@
                 <ul class="nav flex-column">
 
                     <li class="nav-item">
-                        <a class="nav-link " href="/orders">
-                            <i class="material-icons">table_chart</i>
-                            <span>Valdyti užsakymus</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="/add-product">
+                        <a class="nav-link " href="/add-holiday">
                             <i class="material-icons">vertical_split</i>
-                            <span>Pridėti produktą</span>
+                            <span>Pridėti kelionę</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="/add-category">
-                            <i class="material-icons">note_add</i>
-                            <span>Pridėti kategorija</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/control-product">
+                        <a class="nav-link " href="/control-holiday">
                             <i class="material-icons">view_module</i>
-                            <span>Valdyti produktus</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/control-category">
-                            <i class="material-icons">table_chart</i>
-                            <span>Valdyti kategorijas</span>
+                            <span>Valdyti keliones</span>
                         </a>
                     </li>
 

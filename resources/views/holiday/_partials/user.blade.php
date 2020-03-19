@@ -8,10 +8,10 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-small">
 
-                    <a class="dropdown-item" href="/add-product ">
-                        <i class="material-icons">vertical_split</i> Pridėti produktą</a>
-                    <a class="dropdown-item" href="/add-category">
-                        <i class="material-icons">note_add</i> Pridėti kategorija</a>
+                    <a class="dropdown-item" href="/add-holiday ">
+                        <i class="material-icons">vertical_split</i> Pridėti kelionę</a>
+                    <a class="dropdown-item" href="/control-holiday">
+                        <i class="material-icons">view_module</i>Valdyti keliones</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="/logout">
                         <i class="material-icons text-danger">&#xE879;</i> Atsijungti </a>

@@ -17,18 +17,18 @@
 <body class="h-100">
 <div class="container-fluid">
     <div class="row">
-    @include('shop/_partials/dashboard')
+    @include('holiday/_partials/dashboard')
         <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
             <div class="main-navbar sticky-top bg-white">
 
-                @include('shop/_partials/user')
+                @include('holiday/_partials/user')
             </div>
 
             <div class="main-content-container container-fluid px-4">
                 @yield('content')
              </div>
 
-            @include('shop/_partials/footer')
+            @include('holiday/_partials/footer')
         </main>
     </div>
 </div>
