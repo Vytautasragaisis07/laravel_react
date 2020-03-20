@@ -8,7 +8,7 @@
                     <a class="navbar-brand w-100 mr-0" href="/home" style="line-height: 25px;">
                         <div class="d-table m-auto">
                             <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 26px;" src="../../images/control.png" alt="Shards Dashboard">
-                            <span class="d-none d-md-inline ml-1" >Produktų valdymas</span>
+                            <span class="d-none d-md-inline ml-1" >Kelionių valdymas</span>
                         </div>
                     </a>
                     <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
